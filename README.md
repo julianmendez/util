@@ -1,37 +1,101 @@
-## Welcome to GitHub Pages
+# [util](https://julianmendez.github.io/util/)
+*Utility classes*
 
-You can use the [editor on GitHub](https://github.com/julianmendez/util/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[![Build Status](https://travis-ci.org/julianmendez/util.png?branch=master)](https://travis-ci.org/julianmendez/util)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.tu-dresden.inf.lat.util/util-parent/badge.svg)](https://search.maven.org/#search|ga|1|g%3A%22de.tu-dresden.inf.lat.util%22)
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+`util` is a collection of modules containing utility classes to be used across different projects.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## Download
 
-- Bulleted
-- List
+* [The Central Repository](https://repo1.maven.org/maven2/de/tu-dresden/inf/lat/util/)
 
-1. Numbered
-2. List
+* Map module
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```xml
+<dependency>
+  <groupId>de.tu-dresden.inf.lat.util</groupId>
+  <artifactId>util-map</artifactId>
+  <version>0.1.0</version>
+</dependency>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+## Usage
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/julianmendez/util/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Each module of `util` can be used independently.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Source code
+
+To checkout and compile the project, use:
+
+```
+$ git clone https://github.com/julianmendez/util.git
+$ cd util
+$ mvn clean install
+```
+
+To compile the project offline, first download the dependencies:
+
+```
+$ mvn dependency:go-offline
+```
+
+and once offline, use:
+
+```
+$ mvn --offline clean install
+```
+
+The bundles uploaded to [Sonatype](https://oss.sonatype.org/) are created with:
+
+```
+$ mvn clean install -DperformRelease=true
+```
+
+and then on each module:
+
+```
+$ cd target
+$ jar -cf bundle.jar util-*
+```
+
+The version number is updated with:
+
+```
+$ mvn versions:set -DnewVersion=NEW_VERSION
+```
+
+where *NEW_VERSION* is the new version.
+
+
+## Author
+
+[Julian Mendez](https://lat.inf.tu-dresden.de/~mendez/)
+
+
+## License
+
+This software is distributed under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
+
+
+## Release notes
+
+See [release notes](https://github.com/julianmendez/util/blob/master/RELEASE-NOTES.md).
+
+
+### Modules
+
+`util` is composed by the following modules:
+
+* `util-map` : contains utilitity classes for maps.
+
+
+## Contact
+
+In case you need more information, please contact @julianmendez .
+
