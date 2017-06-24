@@ -224,4 +224,50 @@ public class OptMapImplTest {
 		Assert.assertEquals(treeMap, map.asMap());
 	}
 
+	@Test
+	public void testEquals() {
+		OptMapImpl<Integer, String> map = newEmptyMap();
+		Assert.assertEquals(true, map.equals(new OptMapImpl<Integer, String>(new TreeMap<>())));
+		Assert.assertEquals(false, map.equals(null));
+
+		map = newFiboMap(FIBO_SIZE);
+		OptMapImpl<Integer, String> otherMap = newFiboMap(FIBO_SIZE);
+		Assert.assertEquals(map, map);
+		Assert.assertEquals(map.hashCode(), otherMap.hashCode());
+		map.put(-1, "1/2");
+		Assert.assertNotEquals(map, otherMap);
+		map.remove(-1);
+		Assert.assertEquals(map, otherMap);
+		Assert.assertEquals(map.hashCode(), otherMap.hashCode());
+		map.put(0, "");
+		Assert.assertNotEquals(map, otherMap);
+		otherMap.put(0, "");
+		Assert.assertEquals(map, otherMap);
+		Assert.assertEquals(map.hashCode(), otherMap.hashCode());
+	}
+
+	@Test
+	public void testHashCode() {
+		OptMapImpl<Integer, String> map = newFiboMap(FIBO_SIZE);
+		int hashCode = map.hashCode();
+		OptMapImpl<Integer, String> otherMap = newFiboMap(FIBO_SIZE);
+		Assert.assertEquals(map.hashCode(), otherMap.hashCode());
+		Assert.assertEquals(hashCode, map.hashCode());
+	}
+
+	@Test
+	public void testToString() {
+		Assert.assertEquals((new HashMap<Integer, String>()).toString(), newEmptyMap().toString());
+
+		Map<Integer, String> treeMap = new TreeMap<>();
+		treeMap.putAll(newFiboMap(FIBO_SIZE).asMap());
+
+		Map<Integer, String> otherTreeMap = new TreeMap<>();
+		otherTreeMap.putAll(newFiboMap(FIBO_SIZE).asMap());
+
+		OptMapImpl<Integer, String> map = new OptMapImpl<>(otherTreeMap);
+
+		Assert.assertEquals(treeMap.toString(), map.toString());
+	}
+
 }
