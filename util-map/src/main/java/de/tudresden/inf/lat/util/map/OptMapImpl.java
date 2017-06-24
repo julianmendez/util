@@ -127,8 +127,22 @@ public class OptMapImpl<K, V> implements OptMap<K, V> {
 	}
 
 	@Override
+	public Map<K, V> asMap() {
+		return this.map;
+	}
+
+	@Override
 	public boolean equals(Object obj) {
-		return this.map.equals(obj);
+		boolean ret = false;
+		if (this == obj) {
+			ret = true;
+		} else if (Objects.isNull(obj)) {
+			ret = false;
+		} else if (obj instanceof OptMap) {
+			OptMap<?, ?> other = OptMap.class.cast(obj);
+			ret = this.map.equals(other.asMap());
+		}
+		return ret;
 	}
 
 	@Override
@@ -139,11 +153,6 @@ public class OptMapImpl<K, V> implements OptMap<K, V> {
 	@Override
 	public String toString() {
 		return this.map.toString();
-	}
-
-	@Override
-	public Map<K, V> asMap() {
-		return this.map;
 	}
 
 }
