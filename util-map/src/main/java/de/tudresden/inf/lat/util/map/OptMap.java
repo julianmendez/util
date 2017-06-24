@@ -8,18 +8,19 @@ import java.util.Optional;
 import java.util.Set;
 
 /**
- * An object implementing this interface wraps a map with some conditions:
- * <ul>
- * <li>no <code>null</code> value is accepted nor returned</li>
- * <li>the methods that verify containment accept only objects of type K or
- * V</li>
- * </ul>
+ * An object implementing this interface wraps a map with two conditions: (1) no
+ * <code>null</code> value is accepted nor returned and (2) the methods that
+ * verify containment accept only objects of type <code>K</code> or
+ * <code>V</code>.
  * 
- * @author Julian Mendez
+ * 
  * @param <K>
  *            type of keys in this map
  * @param <V>
  *            type of mapped values
+ * 
+ * @author Julian Mendez
+ * 
  */
 public interface OptMap<K, V> {
 

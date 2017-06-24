@@ -4,6 +4,7 @@ package de.tudresden.inf.lat.util.map;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -14,12 +15,15 @@ import java.util.Set;
  * uses the map itself instead. This means that the internal representation can
  * be modified externally, or it can be retrieved by using {@link #asMap()}.
  * 
- * @author Julian Mendez
- * 
  * @param <K>
  *            type of keys in this map
  * @param <V>
  *            type of mapped values
+ * 
+ * @author Julian Mendez
+ * 
+ * @see OptMap
+ * 
  */
 public class OptMapImpl<K, V> implements OptMap<K, V> {
 
@@ -118,18 +122,18 @@ public class OptMapImpl<K, V> implements OptMap<K, V> {
 	}
 
 	@Override
-	public Set<java.util.Map.Entry<K, V>> entrySet() {
+	public Set<Entry<K, V>> entrySet() {
 		return this.map.entrySet();
-	}
-
-	@Override
-	public int hashCode() {
-		return this.map.hashCode();
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		return this.map.equals(obj);
+	}
+
+	@Override
+	public int hashCode() {
+		return this.map.hashCode();
 	}
 
 	@Override

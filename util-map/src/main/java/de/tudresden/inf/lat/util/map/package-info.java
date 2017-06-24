@@ -1,4 +1,4 @@
 /**
- * This package contains interfaces and classes that can be used in any package.
+ * This package contains utility classes for maps.
  */
 package de.tudresden.inf.lat.util.map;
