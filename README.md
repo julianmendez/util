@@ -93,7 +93,7 @@ This software is distributed under the [Apache License Version 2.0](https://www.
 
 ## Release notes
 
-See [release notes](https://github.com/julianmendez/util/blob/master/RELEASE-NOTES.md).
+See [release notes](https://julianmendez.github.io/util/RELEASE-NOTES.html).
 
 
 ### Modules
