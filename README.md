@@ -2,9 +2,10 @@
 *Utility classes*
 
 
-[![Build Status](https://travis-ci.org/julianmendez/util.png?branch=master)](https://travis-ci.org/julianmendez/util)
-[![Coverage Status](https://coveralls.io/repos/github/julianmendez/util/badge.svg?branch=master)](https://coveralls.io/github/julianmendez/util?branch=master)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.tu-dresden.inf.lat.util/util-parent/badge.svg)](https://search.maven.org/#search|ga|1|g%3A%22de.tu-dresden.inf.lat.util%22)
+[![build](https://travis-ci.org/julianmendez/util.png?branch=master)](https://travis-ci.org/julianmendez/util)
+[![coverage](https://coveralls.io/repos/github/julianmendez/util/badge.svg?branch=master)](https://coveralls.io/github/julianmendez/util?branch=master)
+[![maven central](https://maven-badges.herokuapp.com/maven-central/de.tu-dresden.inf.lat.util/util-parent/badge.svg)](https://search.maven.org/#search|ga|1|g%3A%22de.tu-dresden.inf.lat.util%22)
+[![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 
 `util` is a collection of modules containing utility classes to be used across different projects.
