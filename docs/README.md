@@ -1,7 +1,7 @@
 # [util](https://julianmendez.github.io/util/)
 *Utility classes*
 
-[![build](https://travis-ci.org/julianmendez/util.png?branch=master)](https://travis-ci.org/julianmendez/util)
+[![build](https://github.com/julianmendez/util/workflows/Java%20CI/badge.svg)](https://github.com/julianmendez/util/actions)
 [![coverage](https://coveralls.io/repos/github/julianmendez/util/badge.svg?branch=master)](https://coveralls.io/github/julianmendez/util?branch=master)
 [![maven central](https://maven-badges.herokuapp.com/maven-central/de.tu-dresden.inf.lat.util/util-parent/badge.svg)](https://search.maven.org/#search|ga|1|g%3A%22de.tu-dresden.inf.lat.util%22)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
